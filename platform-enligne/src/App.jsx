@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Sidebar from './components/SideBar'
+import Sidebar from "./components/SideBar";
+import MainContent from "./components/MainContent";
+import {useSelector,useDispatch} from "react-redux" ; 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const activeItem = useSelector(
+    (state) => state.ActiveItem.activeItem
+  );
 
+  const currentContent = useSelector((state)=>state.ActiveItem.activeItem) ; 
+
+console.log(currentContent)
   return (
-    <>
+    <div className="flex">
       <Sidebar />
-    </>
-  )
+      <MainContent data={currentContent} />
+    </div>
+  );
 }
 
-export default App
+export default App;
