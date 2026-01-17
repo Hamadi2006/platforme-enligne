@@ -10,12 +10,13 @@ function App() {
   const currentContent = useSelector((state)=>state.ActiveItem.activeItem) ; 
 
 console.log(currentContent)
-  return (
-    <div className="flex">
-      <Sidebar />
-      <MainContent data={currentContent} />
-    </div>
-  );
+return (
+  <div className="flex min-h-screen bg-slate-950">
+    <Sidebar />
+    <MainContent data={currentContent} />
+  </div>
+);
+
 }
 
 export default App;
