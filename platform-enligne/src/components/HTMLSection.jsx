@@ -224,40 +224,9 @@ export default function HTMLSection() {
           </p>
         </header>
 
-        {/* Course Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
-            <div className="text-2xl font-bold text-white mb-1">{lessons.length}</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider">Lessons</div>
-          </div>
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
-            <div className="text-2xl font-bold text-white mb-1">{trackData?.estimatedHours || 0}h</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider">Duration</div>
-          </div>
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
-            <div className="text-2xl font-bold text-emerald-400 mb-1">{completedLessons}</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider">Completed</div>
-          </div>
-          <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-4">
-            <div className="text-2xl font-bold text-orange-400 mb-1 capitalize">{trackData?.difficulty || 'Beginner'}</div>
-            <div className="text-xs text-slate-500 uppercase tracking-wider">Level</div>
-          </div>
-        </div>
 
-        {/* Progress Bar */}
-        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 mb-10">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-semibold text-white">Course Progress</span>
-            <span className="text-sm font-bold text-orange-400">{Math.round(progressPercent)}%</span>
-          </div>
-          <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-500 ease-out rounded-full"
-              style={{ width: `${progressPercent}%` }}
-            />
-          </div>
-        </div>
-
+      
+  
         {/* Lessons List */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-5 flex items-center gap-2">
